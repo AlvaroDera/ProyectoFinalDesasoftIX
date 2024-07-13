@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Enfermera</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Registro de Enfermera</h2>
+        <form id="registerNurseForm">
+            <div class="input-group">
+                <label for="nurse-username">Nombre de Usuario:</label>
+                <input type="text" id="nurse-username" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-name">Nombre:</label>
+                <input type="text" id="nurse-name" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-lastname">Apellido:</label>
+                <input type="text" id="nurse-lastname" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-id">No. ID Personal:</label>
+                <input type="text" id="nurse-id" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-day-rate">Tarifa por Turno Diurno:</label>
+                <input type="number" id="nurse-day-rate" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-evening-rate">Tarifa por Turno Vespertino:</label>
+                <input type="number" id="nurse-evening-rate" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-night-rate">Tarifa por Turno Nocturno:</label>
+                <input type="number" id="nurse-night-rate" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-hourly-rate">Tarifa por Hora:</label>
+                <input type="number" id="nurse-hourly-rate" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-contact">Número de Contacto:</label>
+                <input type="text" id="nurse-contact" required>
+            </div>
+            <div class="input-group">
+                <label for="nurse-password">Contraseña:</label>
+                <input type="password" id="nurse-password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-nurse-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm-nurse-password" required>
+            </div>
+            <button type="submit">Registrar</button>
+            <p id="register-error-msg" class="error-msg"></p>
+        </form>
+    </div>    
+<script src="register-nurse.js"></script>
+</body>
+</html>
