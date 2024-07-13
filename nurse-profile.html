@@ -4,33 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Enfermera</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="profile-container">
-        <h2>Perfil de Enfermera</h2>
-        <div id="nurse-profile">
-            <!- Los datos de la enfermera se cargarán aquí dinámicamente ->
-        </div>
-        <button id="backBtn">Volver</button>
-    </div>
-    <script src="nurse-profile.js"></script>
-</body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Enfermera</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
     <div class="profile-container">
         <h2>Perfil de Enfermera</h2>
-        <form id="nurseProfileForm">
+        <div id="nurse-profile">
+        <!- <form id="nurseProfileForm"> ->
             <div class="input-group">
                 <label for="nurse-first-name">Nombre:</label>
                 <input type="text" id="nurse-first-name" required>
@@ -65,10 +45,34 @@
             </div>
             <button type="submit">Guardar Cambios</button>
             <p id="profile-error-msg" class="error-msg"></p>
-        </form>
+        <!- </form> ->
+         </div>
         <button id="deleteNurseBtn">Eliminar Cuenta</button>
         <button id="logoutBtn">Salir</button>
     </div>
     <script src="nurse-profile.js"></script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Enfermera</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Perfil de Enfermera</h2>
+        <div id="nurse-profile">
+            <!-- Los datos de la enfermera se cargarán aquí dinámicamente -->
+        </div>
+        <button id="backBtn">Volver</button>
+        <button id="deleteAccountBtn">Eliminar Cuenta</button>
+        <button id="logoutBtn">Salir</button>
+    </div>
+    <script src="nurse-profile.js"></script>
+</body>
 </html>
+

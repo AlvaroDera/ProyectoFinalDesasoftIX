@@ -39,7 +39,7 @@
 //             localStorage.setItem('users', JSON.stringify(users));
 //             localStorage.removeItem('loggedInUsername');
 //             alert('Cuenta eliminada correctamente');
-//             window.location.href = 'index.html';
+//             window.location.href = 'index2.html';
 //         }
 //     });
 
@@ -49,12 +49,12 @@
 //     });
 // });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const userProfileForm = document.getElementById('userProfileForm');
     const deleteUserBtn = document.getElementById('deleteUserBtn');
     const logoutBtn = document.getElementById('logoutBtn');
     const profileErrorMsg = document.getElementById('profile-error-msg');
+    const viewNursesBtn = document.getElementById('viewNursesBtn');
     const loggedInUsername = localStorage.getItem('loggedInUsername');
     let users = JSON.parse(localStorage.getItem('users')) || [];
     let user = users.find(user => user.username === loggedInUsername);
@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('user-email').value = user.email;
         document.getElementById('user-password').value = user.password;
         document.getElementById('confirm-user-password').value = user.password;
+    } else {
+        profileErrorMsg.textContent = 'Error: No se pudo cargar el perfil del usuario.';
     }
 
     userProfileForm.addEventListener('submit', function(event) {
@@ -91,12 +93,16 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('users', JSON.stringify(users));
             localStorage.removeItem('loggedInUsername');
             alert('Cuenta eliminada correctamente');
-            window.location.href = 'index.html';
+            window.location.href = 'index2.html';
         }
     });
 
     logoutBtn.addEventListener('click', function() {
         localStorage.removeItem('loggedInUsername');
         window.location.href = 'index2.html';
+    });
+
+    viewNursesBtn.addEventListener('click', function() {
+        window.location.href = 'user.html';
     });
 });
